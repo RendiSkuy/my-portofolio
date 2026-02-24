@@ -164,11 +164,11 @@ const About = () => {
   ];
 
   return (
-    <div ref={aboutRef} className="w-full bg-white overflow-x-hidden">
+    <div ref={aboutRef} className="w-full bg-white dark:bg-gray-900 overflow-x-hidden">
       <section className="py-20 px-6 max-w-6xl mx-auto">
         {/* ===== ABOUT ME ===== */}
         <div className="text-center mb-16 about-item">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight uppercase">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight uppercase">
             About Me
           </h2>
           <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
@@ -183,7 +183,7 @@ const About = () => {
               <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-[80px] opacity-20 animate-pulse"></div>
 
               {/* Photo Wrapper - Menambahkan class floating-photo agar sinkron dengan Home */}
-              <div className="floating-photo relative z-10 w-full h-full rounded-3xl border-4 border-white shadow-2xl overflow-hidden bg-gray-900 flex items-center justify-center">
+              <div className="floating-photo relative z-10 w-full h-full rounded-3xl shadow-2xl overflow-hidden bg-gray-900 flex items-center justify-center">
                 <img
                   src={profileImg}
                   alt="Rendi Ripaldi"
@@ -199,9 +199,9 @@ const About = () => {
 
           {/* Bio Profesional */}
           <div className="w-full md:w-8/12 space-y-5 about-item">
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
               Halo! Perkenalkan, saya{" "}
-              <strong className="text-gray-900">Rendi Ripaldi</strong> seorang
+              <strong className="text-gray-900 dark:text-white">Rendi Ripaldi</strong> seorang
               Junior Web Developer dan Junior Backend Developer yang saat ini
               menempuh pendidikan D3 Teknik Informatika di{" "}
               <strong className="text-blue-600">
@@ -209,7 +209,7 @@ const About = () => {
               </strong>
               .
             </p>
-            <p className="text-gray-600 leading-relaxed text-base">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base">
               Saya memiliki ketertarikan mendalam dalam membangun produk digital
               yang tidak hanya berfungsi dengan baik, tetapi juga memberikan
               dampak nyata bagi penggunanya. Mulai dari merancang antarmuka
@@ -217,7 +217,7 @@ const About = () => {
               terstruktur, hingga mengelola infrastruktur server saya menikmati
               setiap lapisan dalam proses pengembangan perangkat lunak.
             </p>
-            <p className="text-gray-600 leading-relaxed text-base">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base">
               Terbiasa bekerja secara mandiri maupun berkolaborasi dalam tim,
               saya selalu berupaya menulis kode yang bersih, terstruktur, dan
               mudah dipelihara. Saat ini saya terbuka untuk peluang kolaborasi
@@ -226,13 +226,13 @@ const About = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
-              <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100 shadow-sm text-center">
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm text-center">
                 <p className="text-2xl font-extrabold text-blue-600">5+</p>
-                <p className="text-xs text-gray-500 mt-1">Projects</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Projects</p>
               </div>
-              <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100 shadow-sm text-center">
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm text-center">
                 <p className="text-2xl font-extrabold text-blue-600">10+</p>
-                <p className="text-xs text-gray-500 mt-1">Tech Stack</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Tech Stack</p>
               </div>
               <div className="bg-blue-50 p-4 rounded-2xl border border-blue-100 shadow-sm text-center">
                 <p className="text-sm font-bold text-blue-900">D3</p>
@@ -249,7 +249,7 @@ const About = () => {
         {/* EXPERIENCE SECTION WITH IMAGES */}
         <div className="journey-container mb-32">
           <div className="text-center mb-16 about-item">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase">
               Experience
             </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
@@ -259,7 +259,7 @@ const About = () => {
             {experiences.map((item, index) => (
               <div
                 key={index}
-                className="journey-card bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group"
+                className="journey-card bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group"
               >
                 {/* Header card */}
                 <div
@@ -293,13 +293,13 @@ const About = () => {
                     {item.stack.map((tech, i) => (
                       <span
                         key={i}
-                        className="text-[10px] font-bold bg-gray-100 text-gray-600 px-3 py-1 rounded-full uppercase italic"
+                        className="text-[10px] font-bold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-3 py-1 rounded-full uppercase italic"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-500 text-sm leading-relaxed italic border-l-4 border-blue-500 pl-4">
+                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic border-l-4 border-blue-500 pl-4">
                     "{item.description}"
                   </p>
                 </div>
@@ -311,7 +311,7 @@ const About = () => {
         {/* ===== PROFESSIONAL SKILLSET ===== */}
         <div className="skills-container pt-20">
           <div className="text-center mb-16 about-item">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-tighter">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-tighter">
               Professional Skillset
             </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
@@ -319,7 +319,7 @@ const About = () => {
 
           <div className="space-y-16">
             <div className="skills-group">
-              <h3 className="text-center text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">
+              <h3 className="text-center text-sm font-bold text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">
                 Languages & Databases
               </h3>
               <div className="flex flex-wrap justify-center gap-3 md:gap-5">
@@ -330,7 +330,7 @@ const About = () => {
             </div>
 
             <div className="skills-group">
-              <h3 className="text-center text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">
+              <h3 className="text-center text-sm font-bold text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">
                 Frameworks & Tools
               </h3>
               <div className="flex flex-wrap justify-center gap-3 md:gap-5">
@@ -347,11 +347,11 @@ const About = () => {
 };
 
 const SkillPill = ({ item }) => (
-  <div className="skill-card group flex items-center gap-2 bg-white px-4 py-2 md:px-5 md:py-3 rounded-xl border border-gray-100 shadow-sm hover:border-blue-400 hover:shadow-md transition-all duration-300">
+  <div className="skill-card group flex items-center gap-2 bg-white dark:bg-gray-800 px-4 py-2 md:px-5 md:py-3 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-md transition-all duration-300">
     <div className="text-xl md:text-2xl group-hover:scale-110 transition-transform">
       {item.icon}
     </div>
-    <span className="text-gray-700 font-bold text-xs md:text-sm">
+    <span className="text-gray-700 dark:text-gray-200 font-bold text-xs md:text-sm">
       {item.name}
     </span>
   </div>

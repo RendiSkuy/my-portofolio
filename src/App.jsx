@@ -21,14 +21,14 @@ function App() {
   }, [location]);
 
   return (
-    <div className="bg-gray-50 min-h-screen text-gray-900 font-sans selection:bg-blue-200 flex flex-col overflow-x-hidden">
+    <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-100 font-sans selection:bg-blue-200 flex flex-col overflow-x-hidden">
       {/* Tampilkan Splash Screen hanya jika isLoading true */}
       {isLoading && <SplashScreen finishLoading={() => setIsLoading(false)} />}
-      
+
       {!isLoading && (
         <>
           <Navbar />
-          <main className="flex-grow pt-20 md:pt-24"> 
+          <main className="flex-grow pt-20 md:pt-24">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

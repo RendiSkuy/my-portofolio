@@ -16,7 +16,7 @@ const Projects = () => {
       title: "MyDailyKos",
       description: "Aplikasi manajemen keuangan mahasiswa dengan fitur OCR struk belanja menggunakan Gemini AI dan n8n automation.",
       tags: ["Flutter", "Firebase", "n8n", "Gemini AI"],
-      github: "https://github.com/RendiSkuy", 
+      github: "https://github.com/RendiSkuy",
       imagePlaceholder: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000" // Contoh Image
     },
     {
@@ -36,14 +36,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" ref={projectsRef} className="py-24 bg-gray-50 px-6 overflow-hidden">
+    <section id="projects" ref={projectsRef} className="py-24 bg-gray-50 dark:bg-gray-950 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Judul Bagian */}
         <div className="text-center mb-24 project-header">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase tracking-tighter">Proyek & Portofolio</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 uppercase tracking-tighter">Proyek & Portofolio</h2>
           <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
             Kumpulan karya terbaik saya dalam membangun aplikasi mobile, sistem informasi, hingga infrastruktur backend.
           </p>
         </div>
@@ -52,12 +52,12 @@ const Projects = () => {
         <div className="flex flex-col gap-24">
           {projectData.map((project, index) => (
             <div key={index} className="project-card-item">
-              <ProjectCard 
+              <ProjectCard
                 title={project.title}
                 description={project.description}
                 tags={project.tags}
                 github={project.github}
-                isReversed={index % 2 !== 0} 
+                isReversed={index % 2 !== 0}
                 imagePlaceholder={project.imagePlaceholder}
               />
             </div>

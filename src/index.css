@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+/* Tailwind v4: aktifkan dark mode via class .dark di <html> */
+@variant dark (&:where(.dark, .dark *));
+
 @keyframes loading-bar {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .animate-loading-bar {
@@ -11,4 +19,29 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Transisi halus saat ganti tema - hanya color properties,
+   tidak ganggu transform/opacity yang dipakai GSAP */
+body,
+nav,
+header,
+footer,
+section,
+article,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+button,
+input,
+textarea,
+label {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
