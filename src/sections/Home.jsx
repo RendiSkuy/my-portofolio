@@ -3,19 +3,27 @@ import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 
 // Import Fungsi Animasi
-import { initHomeAnimations, handleHeroTilt, resetHeroTilt } from "../utils/homeAnimations";
+import {
+  initHomeAnimations,
+  handleHeroTilt,
+  resetHeroTilt,
+} from "../utils/homeAnimations";
 
 // Import foto profil
 import profileImg from "../assets/rendi.jpg";
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   const homeRef = useRef(null);
   const photoRef = useRef(null);
 
-  useGSAP(() => {
-    const ctx = initHomeAnimations(homeRef, photoRef);
-    return () => ctx.revert(); 
-  }, { scope: homeRef });
+  useGSAP(
+    () => {
+      const ctx = initHomeAnimations(homeRef, photoRef);
+      return () => ctx.revert();
+    },
+    { scope: homeRef },
+  );
 
   return (
     <div ref={homeRef} className="w-full overflow-x-hidden">
@@ -30,28 +38,77 @@ const Home = () => {
             <p className="home-text text-blue-600 font-semibold mb-4 tracking-wide text-lg uppercase">
               Halo, perkenalkan saya
             </p>
-            <h1 className="home-text text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
+            <h1 className="home-text text-5xl md:text-7xl font-extrabold text-gray-900 mb-2 leading-tight">
               Rendi Ripaldi
             </h1>
-            <p className="home-text text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-              Mahasiswa tingkat akhir D3 Teknik Informatika. Berfokus merancang
-              aplikasi mobile dan membangun arsitektur sistem yang efisien.
+
+            {/* ANIMASI TEKS BERGANTI */}
+            <div className="home-text text-4xl md:text-4xl font-bold text-blue-600 mb-6 h-[40px] md:h-[60px]">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Junior Web Developer",
+                    "Junior Backend Developer",
+                    "Junior Mobile Developer",
+                    "Junior Fullstack Developer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
+              />
+            </div>
+
+            <p className="home-text text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
+              Mahasiswa D3 Teknik Informatika tingkat akhir yang fokus di
+              pengembangan web dan mobile. Saya bekerja di sisi frontend maupun backend,
+              dan selalu terbuka untuk hal-hal baru.
             </p>
-            <div className="home-text flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-              <Link to="/projects" className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-lg">
+
+            {/* TOMBOL AKSI */}
+            <div className="home-text flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <Link
+                to="/projects"
+                className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-lg hover:-translate-y-1"
+              >
                 Lihat Portofolio
               </Link>
-              <a href="https://github.com/RendiSkuy" target="_blank" rel="noopener noreferrer" className="bg-white text-gray-900 border border-gray-300 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition">
-                Kunjungi GitHub
+
+              <Link
+                to="/resume"
+                className="bg-white text-blue-600 border border-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition shadow-sm hover:-translate-y-1"
+              >
+                Lihat Resume
+              </Link>
+
+              <a
+                href="https://github.com/RendiSkuy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition shadow-sm flex items-center gap-2 hover:-translate-y-1"
+              >
+                GitHub
               </a>
             </div>
           </div>
 
-          <div ref={photoRef} className="w-full md:w-1/2 flex justify-center items-center mt-10 md:mt-0">
-            <div className="relative w-64 h-80 md:w-72 md:h-96">
+          {/* BAGIAN FOTO */}
+          <div
+            ref={photoRef}
+            className="w-full md:w-1/2 flex justify-center items-center mt-10 md:mt-0"
+          >
+            {/* Ukuran diperbesar di sini */}
+            <div className="relative w-80 h-[28rem] md:w-[28rem] md:h-[32rem]">
+              {/* Blur background juga ikut membesar */}
               <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
+
               <div className="floating-photo w-full h-full relative rounded-3xl border-4 border-white shadow-2xl overflow-hidden bg-gray-900 flex items-center justify-center">
-                <img src={profileImg} alt="Foto Rendi" className="w-full h-full object-cover opacity-90" />
+                <img
+                  src={profileImg}
+                  alt="Foto Rendi"
+                  className="w-full h-full object-cover opacity-90 transition-all duration-700 grayscale hover:grayscale-0"
+                />
               </div>
             </div>
           </div>
@@ -61,18 +118,38 @@ const Home = () => {
       {/* SECTION 2: ABOUT TEASER */}
       <section className="teaser-about-section py-24 bg-white px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-          <div className="w-full md:w-4/12 mx-auto md:mx-0 teaser-about-img">
-            <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-[4/5] bg-gray-100 border border-gray-100">
-              <img src={profileImg} alt="Sekilas Rendi" className="w-full h-full object-cover" />
+          {/* BAGIAN FOTO DENGAN ANIMASI YANG SAMA */}
+          <div className="w-full md:w-5/12 teaser-about-img flex justify-center">
+            {/* Container relatif untuk efek blur dan ukuran */}
+           <div className="relative w-80 h-[20rem] md:w-[28rem] md:h-[28rem]">
+              {/* Blur background - Efek pulse yang sama dengan Section 1 */}
+              <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
+
+              {/* Photo Wrapper dengan class floating-photo */}
+              <div className="floating-photo w-full h-full relative rounded-3xl border-4 border-white shadow-2xl overflow-hidden bg-gray-900 flex items-center justify-center">
+                <img
+                  src={profileImg}
+                  alt="Sekilas Rendi"
+                  className="w-full h-full object-cover opacity-90 transition-all duration-700 grayscale hover:grayscale-0"
+                />
+              </div>
             </div>
           </div>
-          <div className="teaser-about-text w-full md:w-8/12 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sekilas Tentang Saya</h2>
+
+          {/* KONTEN TEKS */}
+          <div className="teaser-about-text w-full md:w-7/12 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Sekilas Tentang Saya
+            </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto md:mx-0 rounded-full mb-8"></div>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Saya memiliki minat mendalam dalam membangun produk perangkat lunak. Tidak hanya sekadar menulis kode, saya senang merancang aplikasi mobile hingga mengatur otomasi backend.
+              Perkenalan singkat tentang saya dalam perjalanan saya di dunia
+              teknologi dan tech stack apa yang saya kuasai sekarang.
             </p>
-            <Link to="/about" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-600 font-semibold rounded-full hover:bg-blue-100 transition">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-600 font-semibold rounded-full hover:bg-blue-100 transition"
+            >
               Learn More Tentang Saya &rarr;
             </Link>
           </div>
@@ -84,16 +161,26 @@ const Home = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
           <div className="w-full md:w-5/12 mx-auto md:mx-0 teaser-projects-img">
             <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-video bg-gray-200 border border-gray-100 flex items-center justify-center">
-              <img src={profileImg} alt="Proyek Rendi" className="w-full h-full object-cover opacity-80" />
+              <img
+                src={profileImg}
+                alt="Proyek Rendi"
+                className="w-full h-full object-cover opacity-80"
+              />
             </div>
           </div>
           <div className="teaser-projects-text w-full md:w-7/12 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proyek & Portofolio</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Proyek & Portofolio
+            </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto md:mx-0 rounded-full mb-8"></div>
             <p className="text-gray-600 text-lg mb-10 leading-relaxed">
-              Lihat bagaimana saya mengembangkan **MyDailyKos**, aplikasi keuangan dengan AI Scanner, dan berbagai proyek sistem informasi lainnya.
+              Lihat Project apa saja yang sudah saya buat, mulai dari aplikasi
+              mobile, sistem informasi, hingga infrastruktur backend.
             </p>
-            <Link to="/projects" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-600 font-semibold rounded-full hover:bg-blue-100 transition">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-600 font-semibold rounded-full hover:bg-blue-100 transition"
+            >
               Jelajahi Proyek Saya &rarr;
             </Link>
           </div>
@@ -104,10 +191,17 @@ const Home = () => {
       <section className="teaser-contact-section py-16 bg-white px-6">
         <div className="teaser-contact-simple max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Mari Berkolaborasi</h2>
-            <p className="text-gray-500 mt-2 text-lg">Tertarik bekerja sama? Kirim pesan sekarang.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Mari Berkolaborasi
+            </h2>
+            <p className="text-gray-500 mt-2 text-lg">
+              Tertarik bekerja sama? Kirim pesan sekarang.
+            </p>
           </div>
-          <Link to="/contact" className="px-8 py-3 bg-gray-900 text-white font-bold rounded-full hover:bg-blue-600 transition shadow-md">
+          <Link
+            to="/contact"
+            className="px-8 py-3 bg-gray-900 text-white font-bold rounded-full hover:bg-blue-600 transition shadow-md"
+          >
             Hubungi Saya &rarr;
           </Link>
         </div>
