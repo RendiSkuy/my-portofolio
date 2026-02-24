@@ -41,7 +41,7 @@ const Projects = () => {
 
         {/* Judul Bagian */}
         <div className="text-center mb-24 project-header">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 uppercase tracking-tighter">Proyek & Portofolio</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 uppercase tracking-tighter">Proyek & Portofolio</h2>
           <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-8"></div>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
             Kumpulan karya terbaik saya dalam membangun aplikasi mobile, sistem informasi, hingga infrastruktur backend.

@@ -38,12 +38,12 @@ const Home = () => {
             <p className="home-text text-blue-600 dark:text-blue-400 font-semibold mb-4 tracking-wide text-lg uppercase">
               Halo, perkenalkan saya
             </p>
-            <h1 className="home-text text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-2 leading-tight">
+            <h1 className="home-text text-4xl sm:text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-2 leading-tight">
               Rendi Ripaldi
             </h1>
 
             {/* ANIMASI TEKS BERGANTI */}
-            <div className="home-text text-4xl md:text-4xl font-bold text-blue-600 mb-6 h-[40px] md:h-[60px]">
+            <div className="home-text text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-6 h-[40px] md:h-[60px]">
               <Typewriter
                 options={{
                   strings: [
@@ -68,12 +68,7 @@ const Home = () => {
 
             {/* TOMBOL AKSI */}
             <div className="home-text flex flex-wrap items-center justify-center md:justify-start gap-4">
-              <Link
-                to="/projects"
-                className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-lg hover:-translate-y-1"
-              >
-                Lihat Portofolio
-              </Link>
+
 
               <Link
                 to="/resume"
@@ -99,7 +94,7 @@ const Home = () => {
             className="w-full md:w-1/2 flex justify-center items-center mt-10 md:mt-0"
           >
             {/* Ukuran diperbesar di sini */}
-            <div className="relative w-80 h-[28rem] md:w-[28rem] md:h-[32rem]">
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-[28rem] md:h-[32rem]">
               {/* Blur background juga ikut membesar */}
               <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
 
@@ -121,7 +116,7 @@ const Home = () => {
           {/* BAGIAN FOTO DENGAN ANIMASI YANG SAMA */}
           <div className="w-full md:w-5/12 teaser-about-img flex justify-center">
             {/* Container relatif untuk efek blur dan ukuran */}
-            <div className="relative w-80 h-[20rem] md:w-[28rem] md:h-[28rem]">
+            <div className="relative w-72 h-[18rem] md:w-[28rem] md:h-[28rem]">
               {/* Blur background - Efek pulse yang sama dengan Section 1 */}
               <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
 
@@ -191,7 +186,7 @@ const Home = () => {
       <section className="teaser-contact-section py-16 bg-white dark:bg-gray-900 px-6">
         <div className="teaser-contact-simple max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
               Mari Berkolaborasi
             </h2>
             <p className="text-gray-500 dark:text-gray-400 mt-2 text-lg">

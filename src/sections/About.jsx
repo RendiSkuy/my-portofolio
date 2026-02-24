@@ -168,7 +168,7 @@ const About = () => {
       <section className="py-20 px-6 max-w-6xl mx-auto">
         {/* ===== ABOUT ME ===== */}
         <div className="text-center mb-16 about-item">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight uppercase">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight uppercase">
             About Me
           </h2>
           <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
@@ -178,7 +178,7 @@ const About = () => {
           {/* Foto Profil */}
           <div className="w-full md:w-5/12 flex justify-center about-item">
             {/* Container utama diperbesar: md:w-[28rem] md:h-[32rem] */}
-            <div className="relative w-72 h-96 md:w-[28rem] md:h-[28rem] group">
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-[28rem] md:h-[28rem] group">
               {/* Efek Blur background - dibuat lebih menyebar */}
               <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-[80px] opacity-20 animate-pulse"></div>
 
@@ -249,7 +249,7 @@ const About = () => {
         {/* EXPERIENCE SECTION WITH IMAGES */}
         <div className="journey-container mb-32">
           <div className="text-center mb-16 about-item">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase">
               Experience
             </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
@@ -311,7 +311,7 @@ const About = () => {
         {/* ===== PROFESSIONAL SKILLSET ===== */}
         <div className="skills-container pt-20">
           <div className="text-center mb-16 about-item">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-tighter">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-tighter">
               Professional Skillset
             </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>

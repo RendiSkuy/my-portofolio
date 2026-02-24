@@ -51,7 +51,7 @@ const Contact = () => {
         {/* SISI KIRI: Teks & Sosial Media */}
         <div className="w-full md:w-1/2 space-y-8 order-2 md:order-1">
           <div className="contact-text">
-            <h2 className="text-6xl md:text-8xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tighter">
+            <h2 className="text-5xl md:text-8xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tighter">
               Find <span className="text-blue-600">Me</span>
             </h2>
             <div className="w-24 h-2 bg-blue-600 rounded-full"></div>
@@ -65,7 +65,7 @@ const Contact = () => {
           <div className="contact-text">
             <a
               href="mailto:rendiripaldi@email.com"
-              className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 border-b-4 border-blue-100 dark:border-blue-900 hover:border-blue-600 pb-1"
+              className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 border-b-4 border-blue-100 dark:border-blue-900 hover:border-blue-600 pb-1 break-all"
             >
               rendiripaldi@email.com
             </a>
@@ -119,7 +119,7 @@ const Contact = () => {
 
         {/* SISI KANAN: Gambar dengan Efek Konsisten */}
         <div className="w-full md:w-1/2 contact-image-container flex justify-center order-1 md:order-2">
-          <div className="relative w-72 h-72 md:w-[28rem] md:h-[28rem] group">
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[28rem] md:h-[28rem] group">
             {/* Efek Blur background - Sama dengan section lain */}
             <div className="absolute inset-0 bg-blue-500 rounded-full blur-[80px] opacity-20 animate-pulse"></div>
 
@@ -134,10 +134,10 @@ const Contact = () => {
             </div>
 
             {/* Badge Status (Opsional) */}
-            <div className="absolute -bottom-2 -right-2 md:bottom-4 md:right-4 z-20 bg-white dark:bg-gray-800 px-6 py-2 rounded-full shadow-lg border border-gray-100 dark:border-gray-700 hidden md:block">
+            <div className="absolute -bottom-2 -right-2 md:bottom-4 md:right-4 z-20 bg-white dark:bg-gray-800 px-4 py-1.5 md:px-6 md:py-2 rounded-full shadow-lg border border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 bg-green-500 rounded-full animate-ping"></span>
-                <span className="text-sm font-bold text-gray-800 dark:text-gray-200">
+                <span className="w-2.5 h-2.5 md:w-3 md:h-3 bg-green-500 rounded-full animate-ping"></span>
+                <span className="text-xs md:text-sm font-bold text-gray-800 dark:text-gray-200">
                   Available for Work
                 </span>
               </div>

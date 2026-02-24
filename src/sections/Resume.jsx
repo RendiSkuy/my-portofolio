@@ -42,7 +42,7 @@ const Resume = () => {
           <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full">
             Professional Profile
           </span>
-          <h2 className="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tighter uppercase">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tighter uppercase">
             Curriculum <span className="text-blue-600">Vitae</span>
           </h2>
           <div className="w-24 h-2 bg-blue-600 mx-auto rounded-full mb-8"></div>
@@ -67,8 +67,8 @@ const Resume = () => {
         {/* ===== PDF VIEWER CONTAINER ===== */}
         <div
           className={`resume-viewer w-full bg-white dark:bg-gray-800 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-8 border-white dark:border-gray-700 overflow-hidden transition-all duration-500 ease-in-out ${isFullscreen
-              ? "fixed inset-4 md:inset-8 z-[60] rounded-3xl"
-              : "relative z-10"
+            ? "fixed inset-4 md:inset-8 z-[60] rounded-3xl"
+            : "relative z-10"
             }`}
         >
           {/* Custom Header Top Bar */}
@@ -113,7 +113,7 @@ const Resume = () => {
             <iframe
               src={`${CV_PATH}#view=FitH&toolbar=0&navpanes=0&scrollbar=1`}
               title="CV Rendi Ripaldi"
-              className={`w-full transition-all duration-300 ${isFullscreen ? "h-[calc(100vh-6rem)]" : "h-[600px] md:h-[850px]"
+              className={`w-full transition-all duration-300 ${isFullscreen ? "h-[calc(100vh-6rem)]" : "h-[450px] sm:h-[600px] md:h-[850px]"
                 }`}
               style={{ border: "none" }}
             />

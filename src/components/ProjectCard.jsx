@@ -19,13 +19,13 @@ const ProjectCard = ({ title, description, tags, github, isReversed, imagePlaceh
 
       {/* Detail Proyek */}
       <div className={`w-full md:w-1/2 text-center ${isReversed ? 'md:text-right' : 'md:text-left'} space-y-4`}>
-        <h3 className="text-3xl font-bold text-gray-900 tracking-tight">{title}</h3>
-        <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">{description}</p>
 
         {/* Tags */}
         <div className={`flex flex-wrap gap-2 justify-center ${isReversed ? 'md:justify-end' : 'md:justify-start'}`}>
           {tags.map((tag, i) => (
-            <span key={i} className="px-4 py-1.5 bg-white border border-gray-200 text-gray-700 text-xs font-bold rounded-full uppercase tracking-widest shadow-sm">
+            <span key={i} className="px-4 py-1.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold rounded-full uppercase tracking-widest shadow-sm">
               {tag}
             </span>
           ))}
@@ -37,7 +37,7 @@ const ProjectCard = ({ title, description, tags, github, isReversed, imagePlaceh
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-600 transition-all duration-300 shadow-md hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-600 transition-all duration-300 shadow-md hover:shadow-xl dark:border dark:border-gray-600"
           >
             <SiGithub className="text-xl" /> View on GitHub
           </a>
