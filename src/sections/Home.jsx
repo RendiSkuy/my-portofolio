@@ -10,7 +10,7 @@ import {
 } from "../utils/homeAnimations";
 
 // Import foto profil
-import profileImg from "../assets/rendi.jpg";
+import profileImg from "../assets/rendi.jpeg";
 import Typewriter from "typewriter-effect";
 
 const Home = () => {

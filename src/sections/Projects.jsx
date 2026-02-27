@@ -2,6 +2,9 @@ import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { initProjectAnimations } from '../utils/projectAnimations';
 import ProjectCard from '../components/ProjectCard';
+import myDailyKosImg from '../assets/Mydailykos.png';
+import bankSampahImg from '../assets/Web-bank-sampah.jpeg';
+import gudangProImg from '../assets/aplikasi-mobile-gudang-pro.jpg';
 
 const Projects = () => {
   const projectsRef = useRef(null);
@@ -17,21 +20,21 @@ const Projects = () => {
       description: "Aplikasi manajemen keuangan mahasiswa dengan fitur OCR struk belanja menggunakan Gemini AI dan n8n automation.",
       tags: ["Flutter", "Firebase", "n8n", "Gemini AI"],
       github: "https://github.com/RendiSkuy",
-      imagePlaceholder: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000" // Contoh Image
+      imagePlaceholder: myDailyKosImg
     },
     {
-      title: "Trading Dashboard",
-      description: "Platform dashboard interaktif untuk memantau data trading menggunakan arsitektur Node.js dan GraphQL.",
-      tags: ["React", "Node.js", "GraphQL", "PostgreSQL"],
+      title: "Aplikasi Mobile Gudang Pro",
+      description: "Aplikasi mobile manajemen inventaris gudang yang efisien untuk memantau stok barang.",
+      tags: ["Mobile App", "React Native", "Node.js", "PostgreSQL"],
       github: "https://github.com/RendiSkuy",
-      imagePlaceholder: "https://images.unsplash.com/photo-1611974714024-462775bb30ee?auto=format&fit=crop&q=80&w=1000"
+      imagePlaceholder: gudangProImg
     },
     {
-      title: "E-Commerce System",
-      description: "Sistem informasi penjualan modern dengan backend Go (Golang) dan infrastruktur server mandiri.",
-      tags: ["Golang", "Docker", "PostgreSQL", "React"],
+      title: "Web Bank Sampah",
+      description: "Sistem informasi pengelolaan bank sampah berbasis web untuk mempermudah pencatatan.",
+      tags: ["Web", "React", "Node.js", "MySQL"],
       github: "https://github.com/RendiSkuy",
-      imagePlaceholder: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000"
+      imagePlaceholder: bankSampahImg
     }
   ];
 

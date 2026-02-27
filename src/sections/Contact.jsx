@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Import foto setup kamu
-import setupImg from "../assets/rendi.jpg";
+import setupImg from "../assets/rendi.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 

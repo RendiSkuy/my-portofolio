@@ -83,7 +83,7 @@ const Resume = () => {
               <div className="flex items-center gap-2">
                 <FaFilePdf className="text-red-500 text-xl" />
                 <span className="text-sm font-bold text-gray-300 tracking-tight hidden sm:block">
-                  Rendi_Ripaldi_CV_2026.pdf
+                  CV-Rendi-Ripaldi.pdf
                 </span>
               </div>
             </div>

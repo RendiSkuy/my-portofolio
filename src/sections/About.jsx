@@ -48,7 +48,11 @@ import {
   FaRobot,
   FaDatabase,
 } from "react-icons/fa";
-import profileImg from "../assets/rendi.jpg";
+import profileImg from "../assets/rendi.jpeg";
+import bankSampahImg from "../assets/Web-bank-sampah.jpeg";
+import gudangProImg from "../assets/aplikasi-mobile-gudang-pro.jpg";
+import myDailyKosImg from "../assets/Mydailykos.png";
+import sertifikatSapImg from "../assets/sertifikat-Sap.jpeg";
 
 const About = () => {
   const aboutRef = useRef(null);
@@ -116,7 +120,7 @@ const About = () => {
       color: "bg-blue-600",
       role: "Fullstack Developer",
       project: "Website Bank Sampah",
-      image: profileImg, // Ganti dengan bankSampahImg nanti
+      image: bankSampahImg,
       stack: ["PHP", "Laravel", "Filament", "MySQL"],
       description:
         "Membangun sistem manajemen bank sampah secara end-to-end, mencakup dashboard admin dan modul transaksi.",
@@ -126,7 +130,7 @@ const About = () => {
       color: "bg-purple-600",
       role: "Fullstack Developer",
       project: "Gudang Pro",
-      image: profileImg, // Ganti dengan gudangProImg nanti
+      image: gudangProImg,
       stack: ["React", "Vite", "Node.js", "Flutter"],
       description:
         "Mengembangkan aplikasi manajemen gudang berbasis web dan mobile dengan sinkronisasi REST API.",
@@ -146,7 +150,7 @@ const About = () => {
       color: "bg-orange-500",
       role: "Fullstack Developer",
       project: "My Daily Kos",
-      image: profileImg, // Ganti dengan myDailyKosImg nanti
+      image: myDailyKosImg,
       stack: ["Flutter", "Firebase", "n8n"],
       description:
         "Aplikasi manajemen keuangan mahasiswa dengan fitur scan struk otomatis via OCR.",
@@ -160,6 +164,27 @@ const About = () => {
       stack: ["Proxmox", "Docker", "Nginx", "WireGuard"],
       description:
         "Mengelola infrastruktur server pribadi menggunakan Proxmox VE dan Docker containers.",
+    },
+  ];
+
+  const certificates = [
+    {
+      title: "Sertifikat Web Development",
+      issuer: "Penyelenggara A",
+      date: "2024",
+      image: sertifikatSapImg,
+    },
+    {
+      title: "Sertifikat Backend Bootcamp",
+      issuer: "Penyelenggara B",
+      date: "2025",
+      image: sertifikatSapImg,
+    },
+    {
+      title: "Sertifikat Kompetensi",
+      issuer: "Penyelenggara C",
+      date: "2026",
+      image: sertifikatSapImg,
     },
   ];
 
@@ -302,6 +327,42 @@ const About = () => {
                   <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic border-l-4 border-blue-500 pl-4">
                     "{item.description}"
                   </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ===== CERTIFICATES SECTION ===== */}
+        <div className="certificates-container mb-32">
+          <div className="text-center mb-16 about-item">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase">
+              Certificates
+            </h2>
+            <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certificates.map((cert, index) => (
+              <div
+                key={index}
+                className="certificate-card bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+              >
+                <div className="w-full h-48 md:h-56 overflow-hidden">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {cert.title}
+                  </h3>
+                  <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                    <span className="font-medium text-blue-600">{cert.issuer}</span>
+                    <span className="italic bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-xs">{cert.date}</span>
+                  </div>
                 </div>
               </div>
             ))}
