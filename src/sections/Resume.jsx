@@ -28,7 +28,7 @@ const Resume = () => {
   return (
     <div
       ref={resumeRef}
-      className="w-full min-h-screen bg-white dark:bg-gray-900 py-20 px-4 sm:px-6 overflow-x-hidden"
+      className="w-full min-h-screen bg-white dark:bg-gray-900 pt-24 pb-20 px-4 sm:px-6 overflow-x-hidden"
     >
       {/* Background Ornamen Estetik */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">

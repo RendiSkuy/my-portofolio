@@ -32,11 +32,9 @@ import {
   SiVercel,
   SiCloudflare,
   SiNginx,
-
   SiPrisma,
   SiNextdotjs,
   SiExpress,
-  SiGitlab,
   SiSqlite,
 } from "react-icons/si";
 import { DiJava } from "react-icons/di";
@@ -53,6 +51,7 @@ import bankSampahImg from "../assets/Web-bank-sampah.jpeg";
 import gudangProImg from "../assets/aplikasi-mobile-gudang-pro.jpg";
 import myDailyKosImg from "../assets/Mydailykos.png";
 import sertifikatSapImg from "../assets/sertifikat-Sap.jpeg";
+import botTradingImg from "../assets/Dasboard-bot-trading.png";
 
 const About = () => {
   const aboutRef = useRef(null);
@@ -96,7 +95,6 @@ const About = () => {
 
     { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
     { name: "GitHub", icon: <SiGithub className="text-[#181717]" /> },
-    { name: "GitLab", icon: <SiGitlab className="text-[#FC6D26]" /> },
     { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
     { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
 
@@ -119,31 +117,19 @@ const About = () => {
       icon: <FaCode className="text-white text-lg" />,
       color: "bg-blue-600",
       role: "Fullstack Developer",
-      project: "Website Bank Sampah",
+      project: "Bank Sampah Web Berbasis Poin",
       image: bankSampahImg,
       stack: ["PHP", "Laravel", "Filament", "MySQL"],
-      description:
-        "Membangun sistem manajemen bank sampah secara end-to-end, mencakup dashboard admin dan modul transaksi.",
+      description: "September 2024 - Febuari 2025 | Indonesia\n\nMembangun sistem manajemen bank sampah terpadu yang mempermudah sirkulasi data transaksional warga.",
     },
     {
       icon: <FaDatabase className="text-white text-lg" />,
       color: "bg-purple-600",
       role: "Fullstack Developer",
-      project: "Gudang Pro",
+      project: "Gudang Pro — SG Manajemen",
       image: gudangProImg,
       stack: ["React", "Vite", "Node.js", "Flutter"],
-      description:
-        "Mengembangkan aplikasi manajemen gudang berbasis web dan mobile dengan sinkronisasi REST API.",
-    },
-    {
-      icon: <FaRobot className="text-white text-lg" />,
-      color: "bg-green-600",
-      role: "Backend Developer",
-      project: "Website Bot Trading",
-      image: profileImg, // Ganti dengan botTradingImg nanti
-      stack: ["TypeScript", "JavaScript", "Node.js", "WebSocket"],
-      description:
-        "Membangun REST API dan koneksi WebSocket untuk data harga real-time exchange API.",
+      description: "Juni 2024 - Agustus 2025 | Indonesia\n\nMengembangkan aplikasi inventaris gudang cross-platform (Web & Mobile) untuk mengontrol stok real-time.",
     },
     {
       icon: <FaMobile className="text-white text-lg" />,
@@ -151,46 +137,32 @@ const About = () => {
       role: "Fullstack Developer",
       project: "My Daily Kos",
       image: myDailyKosImg,
-      stack: ["Flutter", "Firebase", "n8n"],
-      description:
-        "Aplikasi manajemen keuangan mahasiswa dengan fitur scan struk otomatis via OCR.",
+      stack: ["Flutter", "Firebase", "n8n", "OCR"],
+      description: "September 2025 - Febuari 2026 | Indonesia\n\nMerancang aplikasi mobile keuangan harian dengan fitur unggul deteksi pintar kwitansi via OCR otomatis.",
     },
     {
-      icon: <FaServer className="text-white text-lg" />,
-      color: "bg-gray-700",
-      role: "DevOps / Infrastructure",
-      project: "Self-Hosted Home Lab",
-      image: profileImg, // Ganti dengan homeLabImg nanti
-      stack: ["Proxmox", "Docker", "Nginx", "WireGuard"],
-      description:
-        "Mengelola infrastruktur server pribadi menggunakan Proxmox VE dan Docker containers.",
+      icon: <FaRobot className="text-white text-lg" />,
+      color: "bg-green-600",
+      role: "Backend Developer",
+      project: "Trading Dashboard",
+      image: botTradingImg,
+      stack: ["Node.js", "Express.js", "GraphQL", "Prisma"],
+      description: "Januari 2026 – Februari 2026 | Indonesia\n\nMengarsiteki logika Backend dengan GraphQL yang mumpuni dalam menangani data kompleks bervolume tinggi.",
     },
   ];
 
   const certificates = [
     {
-      title: "Sertifikat Web Development",
-      issuer: "Penyelenggara A",
+      title: "Certificate of Completion - SAP Fundamental",
+      issuer: "SAP University Alliances / Edugate",
       date: "2024",
-      image: sertifikatSapImg,
-    },
-    {
-      title: "Sertifikat Backend Bootcamp",
-      issuer: "Penyelenggara B",
-      date: "2025",
-      image: sertifikatSapImg,
-    },
-    {
-      title: "Sertifikat Kompetensi",
-      issuer: "Penyelenggara C",
-      date: "2026",
       image: sertifikatSapImg,
     },
   ];
 
   return (
-    <div ref={aboutRef} className="w-full bg-white dark:bg-gray-900 overflow-x-hidden">
-      <section className="py-20 px-6 max-w-6xl mx-auto">
+    <div ref={aboutRef} className="w-full bg-white dark:bg-gray-900 overflow-x-hidden pt-24">
+      <section className="py-7 px-6 max-w-6xl mx-auto">
         {/* ===== ABOUT ME ===== */}
         <div className="text-center mb-16 about-item">
           <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight uppercase">
@@ -205,20 +177,16 @@ const About = () => {
             {/* Container utama diperbesar: md:w-[28rem] md:h-[32rem] */}
             <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-[28rem] md:h-[28rem] group">
               {/* Efek Blur background - dibuat lebih menyebar */}
-              <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-[80px] opacity-20 animate-pulse"></div>
+              <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-xl opacity-10 animate-pulse"></div>
 
-              {/* Photo Wrapper - Menambahkan class floating-photo agar sinkron dengan Home */}
-              <div className="floating-photo relative z-10 w-full h-full rounded-3xl shadow-2xl overflow-hidden bg-gray-900 flex items-center justify-center">
+              {/* Photo Wrapper */}
+              <div className="floating-photo relative z-10 w-full h-full rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
                 <img
                   src={profileImg}
                   alt="Rendi Ripaldi"
                   className="w-full h-full object-cover transition-all duration-700 ease-in-out grayscale group-hover:grayscale-0 scale-[1.05] group-hover:scale-110"
                 />
               </div>
-
-              {/* Ornamen Tambahan (Opsional) - Agar terlihat lebih pro */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600/10 rounded-full blur-2xl z-0"></div>
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-purple-600/10 rounded-full blur-2xl z-0"></div>
             </div>
           </div>
 
@@ -227,7 +195,7 @@ const About = () => {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
               Halo! Perkenalkan, saya{" "}
               <strong className="text-gray-900 dark:text-white">Rendi Ripaldi</strong> seorang
-              Junior Web Developer dan Junior Backend Developer yang saat ini
+              Junior Fullstack Developer yang saat ini
               menempuh pendidikan D3 Teknik Informatika di{" "}
               <strong className="text-blue-600">
                 Universitas Logistik dan Bisnis Internasional
@@ -304,11 +272,11 @@ const About = () => {
                 </div>
 
                 {/* PROJECT IMAGE - BAGIAN BARU */}
-                <div className="w-full h-48 overflow-hidden">
+                <div className="w-full h-48 bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.project}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0"
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
                   />
                 </div>
 
@@ -324,8 +292,8 @@ const About = () => {
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic border-l-4 border-blue-500 pl-4">
-                    "{item.description}"
+                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic border-l-4 border-blue-500 pl-4 whitespace-pre-line">
+                    {item.description}
                   </p>
                 </div>
               </div>
@@ -348,11 +316,11 @@ const About = () => {
                 key={index}
                 className="certificate-card bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group"
               >
-                <div className="w-full h-48 md:h-56 overflow-hidden">
+                <div className="w-full h-48 md:h-56 bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0"
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
                   />
                 </div>
                 <div className="p-6">
@@ -369,11 +337,11 @@ const About = () => {
           </div>
         </div>
 
-        {/* ===== PROFESSIONAL SKILLSET ===== */}
+        {/* ===== TECH STACK ===== */}
         <div className="skills-container pt-20">
           <div className="text-center mb-16 about-item">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-tighter">
-              Professional Skillset
+              Tech Stack
             </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
@@ -403,7 +371,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 

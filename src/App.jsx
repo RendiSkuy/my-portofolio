@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen'; // <-- Import ini
+import ChatbotWidget from './components/ChatbotWidget';
 
 import Home from './sections/Home';
 import About from './sections/About';
@@ -28,7 +29,7 @@ function App() {
       {!isLoading && (
         <>
           <Navbar />
-          <main className="flex-grow pt-20 md:pt-24">
+          <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -38,6 +39,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <ChatbotWidget />
         </>
       )}
     </div>

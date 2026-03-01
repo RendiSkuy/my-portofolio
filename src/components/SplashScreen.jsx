@@ -15,18 +15,18 @@ const SplashScreen = ({ finishLoading }) => {
       { y: 20, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }
     )
-    .to(textRef.current, {
-      y: -20,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power3.in',
-      delay: 1, // Tahan teks sebentar sebelum hilang
-    })
-    .to(containerRef.current, {
-      yPercent: -100, // Geser layar splash ke atas
-      duration: 1,
-      ease: 'expo.inOut',
-    });
+      .to(textRef.current, {
+        y: -20,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.in',
+        delay: 1, // Tahan teks sebentar sebelum hilang
+      })
+      .to(containerRef.current, {
+        yPercent: -100, // Geser layar splash ke atas
+        duration: 1,
+        ease: 'expo.inOut',
+      });
   }, [finishLoading]);
 
   return (
@@ -37,13 +37,14 @@ const SplashScreen = ({ finishLoading }) => {
       <div className="text-center">
         <h1
           ref={textRef}
-          className="text-4xl md:text-6xl font-bold tracking-tighter"
+          className="flex flex-col gap-2 font-bold tracking-tighter"
         >
-          Rendi<span className="text-blue-500">Skuy.</span>
+          <span className="text-2xl md:text-3xl text-gray-400 font-medium tracking-wide">Welcome to My Portfolio</span>
+          <span className="text-4xl md:text-6xl text-white">Rendi <span className="text-blue-500">Ripaldi.</span></span>
         </h1>
         <div className="mt-4 flex justify-center">
           <div className="w-12 h-1 bg-blue-600 rounded-full overflow-hidden">
-             <div className="w-full h-full bg-white animate-loading-bar"></div>
+            <div className="w-full h-full bg-white animate-loading-bar"></div>
           </div>
         </div>
       </div>
