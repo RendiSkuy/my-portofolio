@@ -18,7 +18,6 @@ import {
   SiMongodb,
   SiGraphql,
   SiDocker,
-  SiProxmox,
   SiLinux,
   SiTailwindcss,
   SiReact,
@@ -52,6 +51,7 @@ import gudangProImg from "../assets/aplikasi-mobile-gudang-pro.jpg";
 import myDailyKosImg from "../assets/Mydailykos.png";
 import sertifikatSapImg from "../assets/sertifikat-Sap.jpeg";
 import botTradingImg from "../assets/Dasboard-bot-trading.png";
+import amandaImg from "../assets/amanda.png";
 
 const About = () => {
   const aboutRef = useRef(null);
@@ -100,7 +100,7 @@ const About = () => {
 
     { name: "Nginx", icon: <SiNginx className="text-[#009639]" /> },
     { name: "Linux", icon: <SiLinux className="text-[#FCC624]" /> },
-    { name: "Proxmox", icon: <SiProxmox className="text-[#E57000]" /> },
+
     {
       name: "Android Studio",
       icon: <SiAndroidstudio className="text-[#3DDC84]" />,
@@ -148,6 +148,15 @@ const About = () => {
       image: botTradingImg,
       stack: ["Node.js", "Express.js", "GraphQL", "Prisma"],
       description: "Januari 2026 – Februari 2026 | Indonesia\n\nMengarsiteki logika Backend dengan GraphQL yang mumpuni dalam menangani data kompleks bervolume tinggi.",
+    },
+    {
+      icon: <FaServer className="text-white text-lg" />,
+      color: "bg-teal-600",
+      role: "Backend Developer (Internship)",
+      project: "Amanda Mart B2B Portal",
+      image: amandaImg,
+      stack: ["Laravel", "PostgreSQL", "2FA"],
+      description: "Maret 2026 – Mei 2026 | Indonesia\n\nMengembangkan portal B2B, implementasi autentikasi 2FA yang aman, serta merancang dan mengoptimalkan skema database PostgreSQL.",
     },
   ];
 

@@ -10,11 +10,17 @@ import {
 } from "react-icons/fa";
 import { initResumeAnimations } from "../utils/resumeAnimations";
 
-// Pastikan file PDF ada di folder public/CV-Rendi-Ripaldi.pdf
-const CV_PATH = "/CV-Rendi-Ripaldi.pdf";
+// Daftar path CV berdasarkan bahasa
+const CV_PATHS = {
+  id: "/CV-Rendi-Ripaldi-indonesia.pdf",
+  en: "/CV-Rendi-Ripaldi - English.pdf",
+};
 
 const Resume = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [cvLanguage, setCvLanguage] = useState("id");
+
+  const currentCvPath = CV_PATHS[cvLanguage];
   const resumeRef = useRef(null);
 
   useGSAP(
@@ -52,15 +58,39 @@ const Resume = () => {
           </p>
         </div>
 
-        {/* ===== TOMBOL AKSI UTAMA ===== */}
+        {/* ===== TOMBOL BAHASA & AKSI UTAMA ===== */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+          {/* Toggle Bahasa */}
+          <div className="flex bg-gray-100 dark:bg-gray-800 p-1.5 rounded-2xl shadow-inner">
+            <button
+              onClick={() => setCvLanguage("id")}
+              className={`px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 ${
+                cvLanguage === "id"
+                  ? "bg-white dark:bg-gray-700 text-blue-600 shadow-md"
+                  : "text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"
+              }`}
+            >
+              Indonesia
+            </button>
+            <button
+              onClick={() => setCvLanguage("en")}
+              className={`px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 ${
+                cvLanguage === "en"
+                  ? "bg-white dark:bg-gray-700 text-blue-600 shadow-md"
+                  : "text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"
+              }`}
+            >
+              English
+            </button>
+          </div>
+
           <a
-            href={CV_PATH}
-            download="CV-Rendi-Ripaldi.pdf"
-            className="resume-btn group w-full sm:w-auto flex items-center justify-center gap-3 bg-gray-900 hover:bg-blue-600 text-white font-bold px-10 py-5 rounded-2xl shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            href={currentCvPath}
+            download={`CV-Rendi-Ripaldi-${cvLanguage.toUpperCase()}.pdf`}
+            className="resume-btn group w-full sm:w-auto flex items-center justify-center gap-3 bg-gray-900 hover:bg-blue-600 text-white font-bold px-10 py-4 sm:py-5 rounded-2xl shadow-2xl transition-all duration-300 hover:-translate-y-2"
           >
             <FaDownload className="group-hover:animate-bounce" />
-            Download CV (PDF)
+            Download CV ({cvLanguage === "id" ? "ID" : "EN"})
           </a>
         </div>
 
@@ -83,14 +113,14 @@ const Resume = () => {
               <div className="flex items-center gap-2">
                 <FaFilePdf className="text-red-500 text-xl" />
                 <span className="text-sm font-bold text-gray-300 tracking-tight hidden sm:block">
-                  CV-Rendi-Ripaldi.pdf
+                  {currentCvPath.replace("/", "")}
                 </span>
               </div>
             </div>
 
             <div className="flex gap-4">
               <a
-                href={CV_PATH}
+                href={currentCvPath}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-xs font-black bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl transition-all transform active:scale-95 shadow-lg shadow-blue-500/30"
@@ -111,8 +141,8 @@ const Resume = () => {
           {/* Iframe Viewport */}
           <div className="bg-[#525659] relative">
             <iframe
-              src={`${CV_PATH}#view=FitH&toolbar=0&navpanes=0&scrollbar=1`}
-              title="CV Rendi Ripaldi"
+              src={`${currentCvPath}#view=FitH&toolbar=0&navpanes=0&scrollbar=1`}
+              title={`CV Rendi Ripaldi - ${cvLanguage === "id" ? "Indonesia" : "English"}`}
               className={`w-full transition-all duration-300 ${isFullscreen ? "h-[calc(100vh-6rem)]" : "h-[450px] sm:h-[600px] md:h-[850px]"
                 }`}
               style={{ border: "none" }}
@@ -140,7 +170,7 @@ const Resume = () => {
             Dokumen ini dienkripsi secara aman. Jika pratinjau tidak muncul di
             browser Anda, silakan{" "}
             <a
-              href={CV_PATH}
+              href={currentCvPath}
               download
               className="text-blue-600 dark:text-blue-400 font-extrabold hover:text-blue-700 dark:hover:text-blue-300 transition underline decoration-2 underline-offset-4"
             >

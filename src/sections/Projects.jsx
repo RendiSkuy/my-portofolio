@@ -9,6 +9,7 @@ import bankSampahImg from "../assets/Web-bank-sampah.jpeg";
 import gudangProImg from "../assets/aplikasi-mobile-gudang-pro.jpg";
 import myDailyKosImg from "../assets/Mydailykos.png";
 import botTradingImg from "../assets/Dasboard-bot-trading.png";
+import amandaImg from "../assets/amanda.png";
 
 const projectsData = [
     {
@@ -54,6 +55,17 @@ const projectsData = [
         github: "https://github.com/jefriwahyu/trading-dashboard.git",
         demo: null,
         imagePlaceholder: botTradingImg,
+    },
+    {
+        title: "Portal B2B AmandaMart",
+        description:
+            "Sistem manajemen rantai pasok terintegrasi untuk mengotomatisasi pengadaan barang dan logistik.",
+        longDescription:
+            "Portal B2B AmandaMart adalah sistem manajemen rantai pasok terintegrasi yang menghubungkan tim internal Merchandiser (MD) AmandaMart dengan Supplier Rekanan untuk mengotomatisasi pengadaan barang dan logistik Distribution Center (DC).\n\n Alur Kerja Sistem:\n• Auto PO: Sistem mendeteksi stok kritis dan memicu draf PO secara otomatis via Stored Procedure.\n• Bidding: Supplier mengajukan penawaran harga kolektif (bulk).\n• Approval: MD menyetujui pemenang lelang melalui dashboard interaktif.\n• VRS Booking: Supplier memesan slot kedatangan truk logistik.\n• LPB & Invoice: Input fisik dengan kalkulasi retur otomatis dan penerbitan nota tagihan (TTF).\n\n Pencapaian Rekayasa Teknis:\n• Multi-Item Architecture: Satu dokumen PO mendukung transaksi banyak item sekaligus.\n• Database-Level Logic & Data Integrity: Stored Procedure, Database Transactions.\n• Automation Simulator: Command CLI kustom untuk simulasi alur bisnis.",
+        tags: ["Laravel", "PostgreSQL", "Vanilla JS", "Tailwind CSS"],
+        github: "https://github.com/RendiSkuy/AmandaSmart.git",
+        demo: null,
+        imagePlaceholder: amandaImg,
     },
 ];
 
