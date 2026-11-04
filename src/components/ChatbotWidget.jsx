@@ -39,7 +39,7 @@ const ChatbotWidget = () => {
             input.includes("tentang") ||
             input.includes("rendi")
         ) {
-            return "Rendi Ripaldi adalah seorang Junior Web & Mobile Developer yang sedang menempuh studi D3 Teknik Informatika di Universitas Logistik dan Bisnis Internasional. Ia suka ngoding pakai React, Flutter, Node.js dan banyak lagi! 🚀";
+            return "Rendi Ripaldi adalah fresh graduate D3 Teknik Informatika (IPK 3,6/4,00) dari Universitas Logistik dan Bisnis Internasional. Ia berfokus pada pengembangan backend, aplikasi mobile, database, dan otomasi alur kerja, dengan pengalaman magang serta proyek akademik individu maupun kelompok. 🚀";
         }
 
         // Kata Kunci: Proyek / Portfolio / Buat apa
@@ -50,7 +50,7 @@ const ChatbotWidget = () => {
             input.includes("bikin apa") ||
             input.includes("project")
         ) {
-            return "Rendi sudah membuat banyak project keren lho! Seperti *Website Bank Sampah*, *Gudang Pro* (Mobile/Web), *My Daily Kos*, dan bahkan nge-host *Home Lab* sendiri. Kamu bisa cek detailnya di menu Projects!";
+            return "Portfolio Rendi memuat empat proyek di CV: sistem web bank sampah berbasis poin, REST API gudang Gudang Pro, aplikasi keuangan My Daily Kos dengan OCR kwitansi, dan aplikasi skrining risiko tidur T.U.R.U. Pengalaman magangnya di portal B2B Amanda Mart. Detail lengkap ada di halaman Projects.";
         }
 
         // Kata Kunci: Sapaan

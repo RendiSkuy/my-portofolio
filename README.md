@@ -1,16 +1,50 @@
-# React + Vite
+# Portfolio — Rendi Ripaldi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for **Rendi Ripaldi** — D3 Informatics Engineering graduate (GPA 3.6/4.00), Universitas Logistik dan Bisnis Internasional, Bandung. Built with React + Vite + Tailwind, animated with GSAP.
 
-Currently, two official plugins are available:
+Focused on backend development, mobile applications, database management, and workflow automation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## React Compiler
+| Layer | Tools |
+|---|---|
+| Frontend | React 19, Vite, Tailwind CSS 4 |
+| Animation | GSAP + @gsap/react |
+| Icons | react-icons |
+| Content | Curriculum Vitae (ID + EN) served as PDF |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
 
-## Expanding the ESLint configuration
+- **Home** — name, role, quick highlights, typewriter roles
+- **About** — profile, experience timeline, certifications (SAP01, BC400), tech stack, soft skills
+- **Projects** — five CV-backed projects with repo links
+- **Resume** — embedded PDF viewer with ID/EN toggle and download
+- **Contact** — email, GitHub, LinkedIn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Projects shown
+
+| Project | Role | Stack |
+|---|---|---|
+| Point-Based Waste Bank Web System | Backend Developer | PHP, Laravel, Filament, MySQL |
+| Gudang Pro — Warehouse Management System | Backend Developer | Node.js, REST API, Flutter, MySQL |
+| My Daily Kos — Boarding House Finance App | Fullstack Developer | Flutter, Firebase, OCR, n8n |
+| T.U.R.U App — Sleep Risk Screening | Fullstack Developer | Flutter, Node.js, TypeScript, PostgreSQL, Python, Gemini API |
+| Amanda Mart B2B Portal (internship) | Backend Developer Intern | Laravel, PostgreSQL, 2FA |
+
+## Run locally
+
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build to dist/
+npm run preview  # serve the production build
+```
+
+## Deploy
+
+The build output in `dist/` is static — deploy to Vercel, Netlify, Cloudflare Pages, or GitHub Pages. No environment variables required.
+
+## Notes
+
+- `public/CV-Rendi-Ripaldi - English.pdf` and `public/CV-Rendi-Ripaldi-indonesia.pdf` are the documents rendered on the Resume page. Replace them to update the CV section.
+- `public/portfolio-rendi.html` is a standalone, print-friendly single-file version of the same portfolio.

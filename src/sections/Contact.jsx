@@ -40,15 +40,15 @@ const Contact = () => {
           </p>
 
           <div className="contact-text">
-            <a
-              href={`https://mail.google.com/mail/?view=cm&to=rendiripaldi225@gmail.com&su=${encodeURIComponent("Halo Rendi — Saya Ingin Terhubung dengan Anda")}&body=${encodeURIComponent("Halo Rendi,\n\nSaya menemukan portfolio Anda dan sangat terkesan dengan karya-karya yang telah Anda buat.\n\nSaya ingin terhubung dengan Anda untuk [tulis tujuan Anda di sini — kolaborasi / peluang kerja / pertanyaan / dll].\n\nMohon balas email ini jika Anda tertarik, saya sangat menantikan respons dari Anda.\n\nTerima kasih,\n[Nama Anda]")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 border-b-4 border-blue-100 dark:border-blue-900 hover:border-blue-600 pb-1 break-all"
-            >
-              rendiripaldi225@gmail.com
-            </a>
-          </div>
+          <a
+            href={`https://mail.google.com/mail/?view=cm&to=rendiripaldi225@gmail.com&su=${encodeURIComponent("Hello Rendi — I would like to connect")}&body=${encodeURIComponent("Hello Rendi,\n\nI came across your portfolio and would like to connect regarding [an opportunity / collaboration / question].\n\nBest regards,\n[Your name]")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 border-b-4 border-blue-100 dark:border-blue-900 hover:border-blue-600 pb-1 break-all"
+          >
+            rendiripaldi225@gmail.com
+          </a>
+        </div>
 
           {/* Ikon Sosial Media */}
           <div className="contact-text flex gap-4 mt-6">
@@ -59,7 +59,7 @@ const Contact = () => {
                 type: "svg-fill",
               },
               {
-                href: "https://www.linkedin.com/in/rendi-ripaldi-a6a9b3325/",
+                href: "https://www.linkedin.com/in/rendi-ripaldi",
                 icon: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z",
                 type: "svg-fill",
               },

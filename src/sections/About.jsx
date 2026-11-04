@@ -6,37 +6,20 @@ import {
   SiFlutter,
   SiDart,
   SiFirebase,
-  SiGo,
   SiNodedotjs,
   SiPython,
   SiPhp,
   SiJavascript,
   SiTypescript,
-  SiCplusplus,
   SiMysql,
   SiPostgresql,
-  SiMongodb,
   SiGraphql,
-  SiDocker,
-  SiLinux,
-  SiTailwindcss,
-  SiReact,
-  SiVite,
   SiN8N,
   SiPostman,
-  SiGit,
   SiGithub,
-  SiAndroidstudio,
-  SiFigma,
-  SiVercel,
-  SiCloudflare,
-  SiNginx,
   SiPrisma,
-  SiNextdotjs,
   SiExpress,
-  SiSqlite,
 } from "react-icons/si";
-import { DiJava } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
 import {
   FaCode,
@@ -44,13 +27,14 @@ import {
   FaServer,
   FaRobot,
   FaDatabase,
+  FaCertificate,
 } from "react-icons/fa";
 import profileImg from "../assets/rendi.jpeg";
 import bankSampahImg from "../assets/Web-bank-sampah.jpeg";
 import gudangProImg from "../assets/aplikasi-mobile-gudang-pro.jpg";
 import myDailyKosImg from "../assets/Mydailykos.png";
+import turuImg from "../assets/semua-project.jpg";
 import sertifikatSapImg from "../assets/sertifikat-Sap.jpeg";
-import botTradingImg from "../assets/Dasboard-bot-trading.png";
 import amandaImg from "../assets/amanda.png";
 
 const About = () => {
@@ -71,101 +55,88 @@ const About = () => {
     { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
     { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
     { name: "PHP", icon: <SiPhp className="text-[#777BB4]" /> },
-    { name: "Go", icon: <SiGo className="text-[#00ADD8]" /> },
-    { name: "Java", icon: <DiJava className="text-[#007396]" /> },
-    { name: "C++", icon: <SiCplusplus className="text-[#00599C]" /> },
     { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
     { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
+    { name: "Firebase Firestore", icon: <SiFirebase className="text-[#FFCA28]" /> },
     { name: "GraphQL", icon: <SiGraphql className="text-[#E10098]" /> },
-
-    { name: "SQLite", icon: <SiSqlite className="text-[#003B57]" /> },
+    { name: "Prisma ORM", icon: <SiPrisma className="text-[#2D3748]" /> },
   ];
 
   const tools = [
-    { name: "VS Code", icon: <VscVscode className="text-[#007ACC]" /> },
-    { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
-    { name: "Next.js", icon: <SiNextdotjs className="text-[#000000]" /> },
-    { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-    { name: "Vite", icon: <SiVite className="text-[#646CFF]" /> },
-    { name: "Express", icon: <SiExpress className="text-[#000000]" /> },
+    { name: "Flutter", icon: <SiFlutter className="text-[#02569B]" /> },
+    { name: "Dart", icon: <SiDart className="text-[#0175C2]" /> },
     { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
-    { name: "Prisma", icon: <SiPrisma className="text-[#2D3748]" /> },
+    { name: "Express.js", icon: <SiExpress className="text-[#000000]" /> },
+    { name: "Laravel", icon: <SiPhp className="text-[#FF2D20]" /> },
+    { name: "Prisma ORM", icon: <SiPrisma className="text-[#2D3748]" /> },
     { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" /> },
-
-    { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
-    { name: "GitHub", icon: <SiGithub className="text-[#181717]" /> },
-    { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
-    { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
-
-    { name: "Nginx", icon: <SiNginx className="text-[#009639]" /> },
-    { name: "Linux", icon: <SiLinux className="text-[#FCC624]" /> },
-
-    {
-      name: "Android Studio",
-      icon: <SiAndroidstudio className="text-[#3DDC84]" />,
-    },
-    { name: "Figma", icon: <SiFigma className="text-[#F24E1E]" /> },
+    { name: "Git / GitHub", icon: <SiGithub className="text-[#181717]" /> },
     { name: "n8n", icon: <SiN8N className="text-[#FF6D5B]" /> },
-
-    { name: "Vercel", icon: <SiVercel className="text-[#000000]" /> },
-    { name: "Cloudflare", icon: <SiCloudflare className="text-[#F38020]" /> },
+    { name: "REST API & GraphQL", icon: <SiGraphql className="text-[#E10098]" /> },
+    { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
+    { name: "MS Office", icon: <VscVscode className="text-[#007ACC]" /> },
   ];
 
   const experiences = [
     {
       icon: <FaCode className="text-white text-lg" />,
       color: "bg-blue-600",
-      role: "Fullstack Developer",
-      project: "Bank Sampah Web Berbasis Poin",
+      role: "Backend Developer",
+      project: "Point-Based Waste Bank Web System",
       image: bankSampahImg,
       stack: ["PHP", "Laravel", "Filament", "MySQL"],
-      description: "September 2024 - Febuari 2025 | Indonesia\n\nMembangun sistem manajemen bank sampah terpadu yang mempermudah sirkulasi data transaksional warga.",
+      description: "Sep 2024 - Feb 2025 | Proyek akademik kelompok\n\nMembangun modul CRUD anggota, transaksi, dan laporan; mengintegrasikan dashboard admin real-time terpusat; mengelola database MySQL hingga deployment server lokal.",
     },
     {
       icon: <FaDatabase className="text-white text-lg" />,
       color: "bg-purple-600",
-      role: "Fullstack Developer",
-      project: "Gudang Pro — SG Manajemen",
+      role: "Backend Developer",
+      project: "Gudang Pro — Warehouse Management System",
       image: gudangProImg,
-      stack: ["React", "Vite", "Node.js", "Flutter"],
-      description: "Juni 2024 - Agustus 2025 | Indonesia\n\nMengembangkan aplikasi inventaris gudang cross-platform (Web & Mobile) untuk mengontrol stok real-time.",
+      stack: ["Node.js", "REST API", "Flutter", "MySQL"],
+      description: "Jun 2025 - Agu 2025 | Proyek akademik kelompok\n\nMembangun REST API backend untuk sinkronisasi stok real-time antara web dan mobile, termasuk pelacakan inventaris, laporan barang masuk/keluar, dan notifikasi.",
     },
     {
       icon: <FaMobile className="text-white text-lg" />,
       color: "bg-orange-500",
       role: "Fullstack Developer",
-      project: "My Daily Kos",
+      project: "My Daily Kos — Boarding House Finance App",
       image: myDailyKosImg,
-      stack: ["Flutter", "Firebase", "n8n", "OCR"],
-      description: "September 2025 - Febuari 2026 | Indonesia\n\nMerancang aplikasi mobile keuangan harian dengan fitur unggul deteksi pintar kwitansi via OCR otomatis.",
-    },
-    {
-      icon: <FaRobot className="text-white text-lg" />,
-      color: "bg-green-600",
-      role: "Backend Developer",
-      project: "Trading Dashboard",
-      image: botTradingImg,
-      stack: ["Node.js", "Express.js", "GraphQL", "Prisma"],
-      description: "Januari 2026 – Februari 2026 | Indonesia\n\nMengarsiteki logika Backend dengan GraphQL yang mumpuni dalam menangani data kompleks bervolume tinggi.",
+      stack: ["Flutter", "Firebase", "OCR", "n8n"],
+      description: "Sep 2025 - Feb 2026 | Proyek akademik individu\n\nMembangun aplikasi mobile keuangan harian anak kos dengan data Firebase terstruktur, pemindaian kwitansi otomatis via OCR + n8n, serta grafik pengeluaran bulanan.",
     },
     {
       icon: <FaServer className="text-white text-lg" />,
       color: "bg-teal-600",
-      role: "Backend Developer (Internship)",
+      role: "Backend Developer Intern",
       project: "Amanda Mart B2B Portal",
       image: amandaImg,
       stack: ["Laravel", "PostgreSQL", "2FA"],
-      description: "Maret 2026 – Mei 2026 | Indonesia\n\nMengembangkan portal B2B, implementasi autentikasi 2FA yang aman, serta merancang dan mengoptimalkan skema database PostgreSQL.",
+      description: "Mar 2026 - Mei 2026 | PT Sapta Muda Berkarya (Stara Digital Partner)\n\nMengerjakan backend portal klien dengan Laravel dan PostgreSQL. Mengimplementasikan two-factor authentication serta merancang dan mengoptimalkan skema database agar data konsisten dan mudah ditelusuri, dengan pendampingan mentor.",
+    },
+    {
+      icon: <FaMobile className="text-white text-lg" />,
+      color: "bg-indigo-600",
+      role: "Fullstack Developer (Frontend & Backend)",
+      project: "T.U.R.U App — Sleep Risk Screening",
+      image: turuImg,
+      stack: ["Flutter", "Node.js", "TypeScript", "PostgreSQL", "Python", "Gemini API"],
+      description: "Mei 2026 - Agu 2026 | Proyek akademik individu\n\nMembangun aplikasi mobile skrining risiko tidur dengan Flutter, REST API Node.js/Express, PostgreSQL dan Prisma, mikroservis Python K-Nearest Neighbor, chatbot edukasi Gemini, serta unduhan laporan PDF.",
     },
   ];
 
   const certificates = [
     {
-      title: "Certificate of Completion - SAP Fundamental",
-      issuer: "SAP University Alliances / Edugate",
-      date: "2024",
+      title: "SAP01 — SAP Overview",
+      issuer: "SAP University Partnership Program (PT Harfan Tri Megah)",
+      date: "Jan 2024",
       image: sertifikatSapImg,
+    },
+    {
+      title: "BC400 — Introduction to the ABAP Workbench",
+      issuer: "SAP University Partnership Program (PT Harfan Tri Megah)",
+      date: "Jul 2025",
+      image: null,
     },
   ];
 
@@ -202,39 +173,18 @@ const About = () => {
           {/* Bio Profesional */}
           <div className="w-full md:w-8/12 space-y-5 about-item">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-              Halo! Perkenalkan, saya{" "}
-              <strong className="text-gray-900 dark:text-white">Rendi Ripaldi</strong> seorang
-              Junior Fullstack Developer yang saat ini
-              menempuh pendidikan D3 Teknik Informatika di{" "}
-              <strong className="text-blue-600">
-                Universitas Logistik dan Bisnis Internasional
-              </strong>
-              .
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base">
-              Saya memiliki ketertarikan mendalam dalam membangun produk digital
-              yang tidak hanya berfungsi dengan baik, tetapi juga memberikan
-              dampak nyata bagi penggunanya. Mulai dari merancang antarmuka
-              aplikasi mobile yang intuitif, membangun backend API yang
-              terstruktur, hingga mengelola infrastruktur server saya menikmati
-              setiap lapisan dalam proses pengembangan perangkat lunak.
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base">
-              Terbiasa bekerja secara mandiri maupun berkolaborasi dalam tim,
-              saya selalu berupaya menulis kode yang bersih, terstruktur, dan
-              mudah dipelihara. Saat ini saya terbuka untuk peluang kolaborasi
-              maupun kontribusi di dunia industri teknologi.
+              {"Fresh graduate D3 Teknik Informatika dengan IPK 3,6/4,00. Berfokus pada pengembangan backend, aplikasi mobile, pengelolaan database, dan otomasi alur kerja. Berpengalaman lewat magang dan proyek akademik menggunakan Laravel, PostgreSQL, REST API, Flutter, otomasi OCR, serta integrasi machine learning. Terbuka untuk peluang Backend, Fullstack, maupun Flutter Developer tingkat junior."}
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm text-center">
-                <p className="text-2xl font-extrabold text-blue-600">5+</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Projects</p>
+                <p className="text-2xl font-extrabold text-blue-600">4</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Proyek CV</p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm text-center">
-                <p className="text-2xl font-extrabold text-blue-600">10+</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Tech Stack</p>
+                <p className="text-2xl font-extrabold text-blue-600">3.6/4.0</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">IPK</p>
               </div>
               <div className="bg-blue-50 p-4 rounded-2xl border border-blue-100 shadow-sm text-center">
                 <p className="text-sm font-bold text-blue-900">D3</p>
@@ -242,7 +192,7 @@ const About = () => {
               </div>
               <div className="bg-blue-50 p-4 rounded-2xl border border-blue-100 shadow-sm text-center">
                 <p className="text-sm font-bold text-blue-900">2026</p>
-                <p className="text-xs text-blue-600 mt-1">Expected Graduate</p>
+                <p className="text-xs text-blue-600 mt-1">Lulus</p>
               </div>
             </div>
           </div>
@@ -326,11 +276,15 @@ const About = () => {
                 className="certificate-card bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group"
               >
                 <div className="w-full h-48 md:h-56 bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
-                  />
+                  {cert.image ? (
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
+                    />
+                  ) : (
+                    <FaCertificate className="text-6xl text-blue-500/70 group-hover:scale-110 transition-transform duration-500" />
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -355,28 +309,41 @@ const About = () => {
             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
 
-          <div className="space-y-16">
-            <div className="skills-group">
-              <h3 className="text-center text-sm font-bold text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">
-                Languages & Databases
-              </h3>
-              <div className="flex flex-wrap justify-center gap-3 md:gap-5">
-                {languages.map((item, index) => (
-                  <SkillPill key={index} item={item} />
-                ))}
-              </div>
+        <div className="space-y-16">
+          <div className="skills-group">
+            <h3 className="text-center text-sm font-bold text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">
+              Languages & Databases
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-5">
+              {languages.map((item, index) => (
+                <SkillPill key={index} item={item} />
+              ))}
             </div>
+          </div>
 
-            <div className="skills-group">
-              <h3 className="text-center text-sm font-bold text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">
-                Frameworks & Tools
-              </h3>
-              <div className="flex flex-wrap justify-center gap-3 md:gap-5">
-                {tools.map((item, index) => (
-                  <SkillPill key={index} item={item} />
-                ))}
-              </div>
+          <div className="skills-group">
+            <h3 className="text-center text-sm font-bold text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">
+              Frameworks & Tools
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-5">
+              {tools.map((item, index) => (
+                <SkillPill key={index} item={item} />
+              ))}
             </div>
+          </div>
+
+          <div className="skills-group">
+            <h3 className="text-center text-sm font-bold text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">
+              Soft Skills
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-5">
+              {["Attention to Detail", "Structured", "Administrative Discipline", "Problem Solving", "Team Collaboration", "Fast Learner"].map((skill) => (
+                <span key={skill} className="bg-white dark:bg-gray-800 px-4 py-2 rounded-xl border border-gray-100 dark:border-gray-700 text-gray-700 dark:text-gray-200 text-sm font-semibold shadow-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
           </div>
         </div>
       </section>
