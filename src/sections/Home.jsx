@@ -42,10 +42,9 @@ const Home = () => {
               <Typewriter
                 options={{
                   strings: [
-                    "Junior Web Developer",
-                    "Junior Backend Developer",
-                    "Junior Mobile Developer",
-                    "Junior Fullstack Developer",
+                    "Backend Developer",
+                    "Fullstack Developer",
+                    "Flutter Developer",
                   ],
                   autoStart: true,
                   loop: true,
@@ -56,9 +55,7 @@ const Home = () => {
             </div>
 
             <p className="home-text text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
-              Mahasiswa D3 Teknik Informatika tingkat akhir yang fokus di
-              pengembangan web dan mobile. Saya bekerja di sisi frontend maupun backend,
-              dan selalu terbuka untuk hal-hal baru.
+              Fresh graduate in Informatics Engineering with internship experience and selected backend and mobile projects.
             </p>
 
             {/* TOMBOL AKSI */}

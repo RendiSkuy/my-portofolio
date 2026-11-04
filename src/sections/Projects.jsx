@@ -8,62 +8,62 @@ import GitHubContributions from "../components/GitHubContributions";
 import bankSampahImg from "../assets/Web-bank-sampah.jpeg";
 import gudangProImg from "../assets/aplikasi-mobile-gudang-pro.jpg";
 import myDailyKosImg from "../assets/Mydailykos.png";
-import botTradingImg from "../assets/Dasboard-bot-trading.png";
 import amandaImg from "../assets/amanda.png";
+import turuImg from "../assets/semua-project.jpg";
 
 const projectsData = [
     {
-        title: "Bank Sampah Web",
+        title: "Bank Sampah Web Berbasis Poin",
         description:
-            "Sistem manajemen bank sampah berbasis web dengan fitur poin dan transaksi digital untuk warga.",
+            "Web-based waste bank management system for member, transaction, and report tracking.",
         longDescription:
-            "Membangun sistem manajemen bank sampah terpadu yang mempermudah sirkulasi data transaksional warga.\n\nFitur utama meliputi manajemen poin nasabah, pencatatan transaksi sampah, laporan keuangan otomatis, dan dashboard admin menggunakan Filament PHP.",
+            "Collaborative academic backend project for digitizing waste bank operations. Built CRUD modules for member, transaction, and report management with PHP, Laravel, and Filament; integrated an admin dashboard; and managed MySQL data with local deployment.",
         tags: ["PHP", "Laravel", "Filament", "MySQL"],
-        github: "https://github.com/RendiSkuy/Sistem-Bank-Sampah-Berbasis-Poin.git",
+        github: "https://github.com/RendiSkuy/Sistem-Bank-Sampah-Berbasis-Poin",
         demo: null,
         imagePlaceholder: bankSampahImg,
     },
     {
-        title: "Gudang Pro - Manajemen Stok",
+        title: "Gudang Pro — Warehouse Management System",
         description:
-            "Aplikasi inventaris gudang cross-platform (Web & Mobile) untuk mengontrol stok secara real-time.",
+            "Backend REST API for real-time warehouse stock synchronization across web and mobile clients.",
         longDescription:
-            "Mengembangkan aplikasi inventaris gudang cross-platform (Web & Mobile) untuk mengontrol stok real-time.\n\nDibangun dengan React + Vite untuk frontend web, Flutter untuk mobile, dan Express.js sebagai backend API. Mendukung multi-user dengan role management dan laporan stok harian.",
-        tags: ["React", "Vite", "Express.js", "Flutter", "MySQL"],
-        github: "https://github.com/RendiSkuy/gudang_pro.git",
+            "Collaborative academic project. Built a Node.js REST API for synchronizing stock data across web and mobile applications, with inventory tracking, incoming/outgoing stock reports, and real-time notifications.",
+        tags: ["Node.js", "REST API", "Flutter", "MySQL"],
+        github: "https://github.com/RendiSkuy/gudangpro-api-js",
         demo: null,
         imagePlaceholder: gudangProImg,
     },
     {
-        title: "My Daily Kos",
+        title: "My Daily Kos — Boarding House Finance App",
         description:
-            "Aplikasi mobile keuangan harian dengan fitur deteksi kwitansi otomatis via OCR.",
+            "Individual Flutter app for daily boarding-house finances with automated receipt OCR.",
         longDescription:
-            "Merancang aplikasi mobile keuangan harian dengan fitur unggul deteksi pintar kwitansi via OCR otomatis.\n\nMenggunakan Flutter untuk UI, Firebase sebagai database realtime, n8n untuk workflow automation, dan OCR untuk scanning kwitansi secara otomatis.",
-        tags: ["Flutter", "Firebase", "n8n", "OCR", "Dart"],
-        github: "https://github.com/RendiSkuy/fe_flutter_MydailyKos.git",
+            "Built an individual mobile finance app using Flutter with Firebase Firestore, Auth, and Storage. Automated receipt scanning and expense recording with OCR and n8n, and designed monthly expense summaries and charts.",
+        tags: ["Flutter", "Firebase", "OCR", "n8n"],
+        github: "https://github.com/RendiSkuy/fe_flutter_MydailyKos",
         demo: null,
         imagePlaceholder: myDailyKosImg,
     },
     {
-        title: "Trading Dashboard",
+        title: "T.U.R.U App — Sleep Risk Screening",
         description:
-            "Dashboard backend trading dengan GraphQL untuk menangani data kompleks bervolume tinggi.",
+            "Individual mobile application for sleep-pattern risk screening and interactive health education.",
         longDescription:
-            "Mengarsiteki logika Backend dengan GraphQL yang mumpuni dalam menangani data kompleks bervolume tinggi.\n\nDibangun menggunakan Node.js,Javascript, GraphQL, dan Prisma ORM. Mendukung real-time data subscription dan query efisien untuk dashboard analitik trading.",
-        tags: ["Node.js", "Javascript", "GraphQL", "Prisma", "PostgreSQL"],
-        github: "https://github.com/jefriwahyu/trading-dashboard.git",
+            "Built a Flutter app that records daily sleep activity and shows interactive risk dashboards. Developed a Node.js, TypeScript, and Express REST API with PostgreSQL and Prisma; integrated a Python K-Nearest Neighbors microservice and Google Gemini chatbot; added downloadable PDF reports.",
+        tags: ["Flutter", "Node.js", "TypeScript", "PostgreSQL", "Python", "Gemini API"],
+        github: "https://github.com/RendiSkuy/Turu_app-fe",
         demo: null,
-        imagePlaceholder: botTradingImg,
+        imagePlaceholder: turuImg,
     },
     {
-        title: "Portal B2B AmandaMart",
+        title: "Amanda Mart B2B Portal",
         description:
-            "Sistem manajemen rantai pasok terintegrasi untuk mengotomatisasi pengadaan barang dan logistik.",
+            "Client B2B portal backend developed during an internship at Stara Digital Partner.",
         longDescription:
-            "Portal B2B AmandaMart adalah sistem manajemen rantai pasok terintegrasi yang menghubungkan tim internal Merchandiser (MD) AmandaMart dengan Supplier Rekanan untuk mengotomatisasi pengadaan barang dan logistik Distribution Center (DC).\n\n Alur Kerja Sistem:\n• Auto PO: Sistem mendeteksi stok kritis dan memicu draf PO secara otomatis via Stored Procedure.\n• Bidding: Supplier mengajukan penawaran harga kolektif (bulk).\n• Approval: MD menyetujui pemenang lelang melalui dashboard interaktif.\n• VRS Booking: Supplier memesan slot kedatangan truk logistik.\n• LPB & Invoice: Input fisik dengan kalkulasi retur otomatis dan penerbitan nota tagihan (TTF).\n\n Pencapaian Rekayasa Teknis:\n• Multi-Item Architecture: Satu dokumen PO mendukung transaksi banyak item sekaligus.\n• Database-Level Logic & Data Integrity: Stored Procedure, Database Transactions.\n• Automation Simulator: Command CLI kustom untuk simulasi alur bisnis.",
-        tags: ["Laravel", "PostgreSQL", "Vanilla JS", "Tailwind CSS"],
-        github: "https://github.com/RendiSkuy/AmandaSmart.git",
+            "Contributed to backend development for the Amanda Mart B2B portal using Laravel and PostgreSQL. Implemented Two-Factor Authentication and designed and optimized database schemas for secure, consistent, and traceable client data under mentor guidance.",
+        tags: ["Laravel", "PostgreSQL", "Two-Factor Authentication"],
+        github: "https://github.com/RendiSkuy/AmandaSmart",
         demo: null,
         imagePlaceholder: amandaImg,
     },
@@ -94,8 +94,7 @@ const Projects = () => {
                     </h1>
                     <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-6" />
                     <p className="text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
-                        Kumpulan proyek yang telah saya kerjakan, mulai dari aplikasi mobile,
-                        sistem web, hingga infrastruktur backend.
+                        Selected academic and internship projects across backend, mobile, and data-driven application development.
                     </p>
                     <GitHubContributions />
                 </div>
