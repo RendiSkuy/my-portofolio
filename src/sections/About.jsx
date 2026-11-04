@@ -85,7 +85,7 @@ const About = () => {
       project: "Point-Based Waste Bank Web System",
       image: bankSampahImg,
       stack: ["PHP", "Laravel", "Filament", "MySQL"],
-      description: "Sep 2024 - Feb 2025 | Collaborative academic project\n\nBuilt backend CRUD modules for member, transaction, and report management; integrated a centralized real-time admin dashboard; managed MySQL data and local deployment.",
+      description: "Sep 2024 - Feb 2025 | Proyek akademik kelompok\n\nMembangun modul CRUD anggota, transaksi, dan laporan; mengintegrasikan dashboard admin real-time terpusat; mengelola database MySQL hingga deployment server lokal.",
     },
     {
       icon: <FaDatabase className="text-white text-lg" />,
@@ -94,7 +94,7 @@ const About = () => {
       project: "Gudang Pro — Warehouse Management System",
       image: gudangProImg,
       stack: ["Node.js", "REST API", "Flutter", "MySQL"],
-      description: "Jun 2025 - Aug 2025 | Collaborative academic project\n\nDeveloped a backend REST API for real-time stock synchronization across web and mobile clients, including inventory tracking, incoming/outgoing stock reports, and notifications.",
+      description: "Jun 2025 - Agu 2025 | Proyek akademik kelompok\n\nMembangun REST API backend untuk sinkronisasi stok real-time antara web dan mobile, termasuk pelacakan inventaris, laporan barang masuk/keluar, dan notifikasi.",
     },
     {
       icon: <FaMobile className="text-white text-lg" />,
@@ -103,7 +103,7 @@ const About = () => {
       project: "My Daily Kos — Boarding House Finance App",
       image: myDailyKosImg,
       stack: ["Flutter", "Firebase", "OCR", "n8n"],
-      description: "Sep 2025 - Feb 2026 | Individual academic project\n\nBuilt a mobile app for daily boarding-house finances with structured Firebase data, automated receipt scanning and OCR recording through n8n, plus monthly spending charts.",
+      description: "Sep 2025 - Feb 2026 | Proyek akademik individu\n\nMembangun aplikasi mobile keuangan harian anak kos dengan data Firebase terstruktur, pemindaian kwitansi otomatis via OCR + n8n, serta grafik pengeluaran bulanan.",
     },
     {
       icon: <FaServer className="text-white text-lg" />,
@@ -112,7 +112,7 @@ const About = () => {
       project: "Amanda Mart B2B Portal",
       image: amandaImg,
       stack: ["Laravel", "PostgreSQL", "2FA"],
-      description: "Mar 2026 - May 2026 | PT Sapta Muda Berkarya (Stara Digital Partner)\n\nWorked on the client portal backend using Laravel and PostgreSQL. Implemented two-factor authentication and designed/optimized database schemas for consistent, traceable data under mentor guidance.",
+      description: "Mar 2026 - Mei 2026 | PT Sapta Muda Berkarya (Stara Digital Partner)\n\nMengerjakan backend portal klien dengan Laravel dan PostgreSQL. Mengimplementasikan two-factor authentication serta merancang dan mengoptimalkan skema database agar data konsisten dan mudah ditelusuri, dengan pendampingan mentor.",
     },
     {
       icon: <FaMobile className="text-white text-lg" />,
@@ -121,7 +121,7 @@ const About = () => {
       project: "T.U.R.U App — Sleep Risk Screening",
       image: turuImg,
       stack: ["Flutter", "Node.js", "TypeScript", "PostgreSQL", "Python", "Gemini API"],
-      description: "May 2026 - Aug 2026 | Individual academic project\n\nBuilt a mobile sleep-risk screening app with Flutter, a Node.js/Express API, PostgreSQL and Prisma, a Python K-Nearest Neighbors microservice, Gemini chatbot education, and PDF report downloads.",
+      description: "Mei 2026 - Agu 2026 | Proyek akademik individu\n\nMembangun aplikasi mobile skrining risiko tidur dengan Flutter, REST API Node.js/Express, PostgreSQL dan Prisma, mikroservis Python K-Nearest Neighbor, chatbot edukasi Gemini, serta unduhan laporan PDF.",
     },
   ];
 
@@ -173,26 +173,26 @@ const About = () => {
           {/* Bio Profesional */}
           <div className="w-full md:w-8/12 space-y-5 about-item">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-              {"Fresh graduate in Informatics Engineering with a 3.6/4.0 GPA. Focused on backend development, mobile applications, databases, and workflow automation. Experienced through an internship and academic projects using Laravel, PostgreSQL, REST APIs, Flutter, OCR automation, and machine-learning integrations. Open to junior Backend, Fullstack, and Flutter Developer opportunities."}
+              {"Fresh graduate D3 Teknik Informatika dengan IPK 3,6/4,00. Berfokus pada pengembangan backend, aplikasi mobile, pengelolaan database, dan otomasi alur kerja. Berpengalaman lewat magang dan proyek akademik menggunakan Laravel, PostgreSQL, REST API, Flutter, otomasi OCR, serta integrasi machine learning. Terbuka untuk peluang Backend, Fullstack, maupun Flutter Developer tingkat junior."}
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm text-center">
                 <p className="text-2xl font-extrabold text-blue-600">4</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">CV Projects</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Proyek CV</p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm text-center">
                 <p className="text-2xl font-extrabold text-blue-600">3.6/4.0</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">GPA</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">IPK</p>
               </div>
               <div className="bg-blue-50 p-4 rounded-2xl border border-blue-100 shadow-sm text-center">
                 <p className="text-sm font-bold text-blue-900">D3</p>
-                <p className="text-xs text-blue-600 mt-1">Informatics Engineering</p>
+                <p className="text-xs text-blue-600 mt-1">Teknik Informatika</p>
               </div>
               <div className="bg-blue-50 p-4 rounded-2xl border border-blue-100 shadow-sm text-center">
                 <p className="text-sm font-bold text-blue-900">2026</p>
-                <p className="text-xs text-blue-600 mt-1">Graduated</p>
+                <p className="text-xs text-blue-600 mt-1">Lulus</p>
               </div>
             </div>
           </div>

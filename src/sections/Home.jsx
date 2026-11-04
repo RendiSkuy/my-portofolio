@@ -55,7 +55,7 @@ const Home = () => {
             </div>
 
             <p className="home-text text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
-              Fresh graduate in Informatics Engineering with internship experience and selected backend and mobile projects.
+              Fresh graduate D3 Teknik Informatika (IPK 3,6/4,00) dengan pengalaman magang backend serta proyek aplikasi backend dan mobile.
             </p>
 
             {/* TOMBOL AKSI */}

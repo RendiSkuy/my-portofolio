@@ -39,7 +39,7 @@ const ChatbotWidget = () => {
             input.includes("tentang") ||
             input.includes("rendi")
         ) {
-            return "Rendi Ripaldi is a D3 Informatics Engineering graduate with a 3.6/4.0 GPA from Universitas Logistik dan Bisnis Internasional. He focuses on backend development, mobile applications, databases, and workflow automation, with internship and individual or collaborative academic project experience. 🚀";
+            return "Rendi Ripaldi adalah fresh graduate D3 Teknik Informatika (IPK 3,6/4,00) dari Universitas Logistik dan Bisnis Internasional. Ia berfokus pada pengembangan backend, aplikasi mobile, database, dan otomasi alur kerja, dengan pengalaman magang serta proyek akademik individu maupun kelompok. 🚀";
         }
 
         // Kata Kunci: Proyek / Portfolio / Buat apa
@@ -50,7 +50,7 @@ const ChatbotWidget = () => {
             input.includes("bikin apa") ||
             input.includes("project")
         ) {
-            return "Rendi's portfolio highlights four CV projects: a point-based waste bank web system, Gudang Pro warehouse API, My Daily Kos finance app with receipt OCR, and T.U.R.U sleep-risk screening app. His internship involved the Amanda Mart B2B portal. Details are available on the Projects page.";
+            return "Portfolio Rendi memuat empat proyek di CV: sistem web bank sampah berbasis poin, REST API gudang Gudang Pro, aplikasi keuangan My Daily Kos dengan OCR kwitansi, dan aplikasi skrining risiko tidur T.U.R.U. Pengalaman magangnya di portal B2B Amanda Mart. Detail lengkap ada di halaman Projects.";
         }
 
         // Kata Kunci: Sapaan
